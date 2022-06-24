@@ -1,0 +1,27 @@
+server:
+  port: 5081
+  servlet:
+    session:
+      cookie:
+        name: myjavasession
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          java-client:
+            client-id: java-client
+            client-secret: ZEHAAA7Uya/dFPOIjv9eQ9+1voK49aJ2
+            provider: authorizationserver
+            client-name: java-client
+            authorization-grant-type: authorization_code
+            client-authentication-method: post
+            scope: profile,email
+            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          authorizationserver:
+            authorization-uri: http://noobauth.vn:4000/oauth2/noob-realm/authorize
+            token-uri: http://noobauth.vn:4000/oauth2/noob-realm/token
+            user-info-uri: http://noobauth.vn:4000/oauth2/noob-realm/userinfo
+            user-name-attribute: "preferred_username"
+            jwk-set-uri: http://noobauth.vn:4000/oauth2/noob-realm/certs
