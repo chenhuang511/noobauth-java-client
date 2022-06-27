@@ -31,6 +31,9 @@ spring:
 ```
 
 With local running, you may need modify for machine ```hosts``` file, separate the domains of NoobAuth and JavaClient to avoid the confusion about cookies of 2 applications.
+For example:
+* 127.0.0.1 noobauth.vn
+* 127.0.0.1 javaclient.vn
 
 # License
 
