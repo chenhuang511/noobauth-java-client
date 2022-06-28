@@ -12,14 +12,14 @@ spring:
           java-client:
             client-id: java-client
             client-secret: ZEHAAA7Uya/dFPOIjv9eQ9+1voK49aJ2
-            provider: authorizationserver
+            provider: authorization-server
             client-name: java-client
             authorization-grant-type: authorization_code
             client-authentication-method: post
             scope: profile,email
-            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
         provider:
-          authorizationserver:
+          authorization-server:
             authorization-uri: http://noobauth.vn:4000/oauth2/noob-realm/authorize
             token-uri: http://noobauth.vn:4000/oauth2/noob-realm/token
             user-info-uri: http://noobauth.vn:4000/oauth2/noob-realm/userinfo
